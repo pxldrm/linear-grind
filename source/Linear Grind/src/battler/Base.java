@@ -97,4 +97,12 @@ public class Base {
 	public int 			exp(){
 		return exp;
 	}
+//************************************************************
+/**
+*	Mutators
+*/
+//************************************************************
+	public void addHp(int hp){
+		attributeList[0] += hp;
+	}
 }

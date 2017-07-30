@@ -10,7 +10,7 @@
 package scene;
 import battler.Enemy;
 import data.Global;
-import data.Type;
+import game.Type;
 public class Map extends Base{
 //************************************************************
 /**
@@ -79,20 +79,20 @@ public class Map extends Base{
 		String c = "";
 		for (int i = 0; i < enemyList.length; i++){
 			if (enemyList[i] != null)
-				a += enemyList[i].name() 		+ Global.spaces(25 - enemyList[i].name().length());
+				a += enemyList[i].name() 		+ display.Base.space(25 - enemyList[i].name().length());
 		}
 		for (int i = 0; i < probabilityList.length; i++){
-			b += probabilityList[i] 			+ Global.spaces(4 - String.valueOf(probabilityList[i]).length());
+			b += probabilityList[i] 			+ display.Base.space(4 - String.valueOf(probabilityList[i]).length());
 		}
 		for (int i = 0; i < shopList.length; i++){
 			if (shopList[i] != null)
-				c += shopList[i].name() 		+ Global.spaces(15 - shopList[i].name().length());
+				c += shopList[i].name() 		+ display.Base.space(15 - shopList[i].name().length());
 		}
-		return 	id 					+ Global.spaces(3 - String.valueOf(id).length()) +
-				name 				+ Global.spaces(20 - name.length()) +
-				mapType.name() 		+ Global.spaces(15 - mapType.name().length()) +
-				a 					+ Global.spaces(50 - a.length()) +
-				b 					+ Global.spaces(10 - b.length()) +
+		return 	id 					+ display.Base.space(3 - String.valueOf(id).length()) +
+				name 				+ display.Base.space(20 - name.length()) +
+				mapType.name() 		+ display.Base.space(15 - mapType.name().length()) +
+				a 					+ display.Base.space(50 - a.length()) +
+				b 					+ display.Base.space(10 - b.length()) +
 				c;
 	}
 }

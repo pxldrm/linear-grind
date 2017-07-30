@@ -9,7 +9,7 @@
 //************************************************************
 package battler;
 import data.Global;
-import data.Role;
+import game.Role;
 public class Actor extends Base{
 //************************************************************
 /**
@@ -47,6 +47,9 @@ public class Actor extends Base{
 	public item.Base[] 	equipmentList(){
 		return equipmentList;
 	}
+	public int 			next(){
+		return (int) Math.pow(lv * 10, lv);
+	}
 //************************************************************
 /**
 *	Output as String
@@ -58,27 +61,27 @@ public class Actor extends Base{
 		String c = "";
 		String d = "";
 		for (int i = 0; i < attributeList.length; i++){
-			a += attributeList[i] 				+ Global.spaces(4 - String.valueOf(attributeList[i]).length());
+			a += attributeList[i] 				+ display.Base.space(4 - String.valueOf(attributeList[i]).length());
 		}
 		for (int i = 0; i < elementList.length; i++){
-			b += elementList[i] 				+ Global.spaces(4 - String.valueOf(elementList[i]).length());
+			b += elementList[i] 				+ display.Base.space(4 - String.valueOf(elementList[i]).length());
 		}
 		for (int i = 0; i < skillList.length; i++){
 			if (skillList[i] != null)
-				c += skillList[i].name() 		+ Global.spaces(10 - skillList[i].name().length());
+				c += skillList[i].name() 		+ display.Base.space(10 - skillList[i].name().length());
 		}
 		for (int i = 0; i < equipmentList.length; i++){
 			if (equipmentList[i] != null)
-				d += equipmentList[i].name() 	+ Global.spaces(10 - equipmentList[i].name().length());
+				d += equipmentList[i].name() 	+ display.Base.space(10 - equipmentList[i].name().length());
 		}
-		return 	id 			+ Global.spaces(3 - String.valueOf(id).length()) +
-				name 		+ Global.spaces(10 - name.length()) +
-				a 			+ Global.spaces(20 - a.length()) +
-				b 			+ Global.spaces(50 - b.length()) +
-				c 			+ Global.spaces(60 - c.length()) +
-				lv 			+ Global.spaces(3 - String.valueOf(lv).length()) +
-				exp 		+ Global.spaces(6 - String.valueOf(exp).length()) +
-				role.name() + Global.spaces(10 - role.name().length()) +
+		return 	id 			+ display.Base.space(3 - String.valueOf(id).length()) +
+				name 		+ display.Base.space(10 - name.length()) +
+				a 			+ display.Base.space(20 - a.length()) +
+				b 			+ display.Base.space(50 - b.length()) +
+				c 			+ display.Base.space(60 - c.length()) +
+				lv 			+ display.Base.space(3 - String.valueOf(lv).length()) +
+				exp 		+ display.Base.space(6 - String.valueOf(exp).length()) +
+				role.name() + display.Base.space(10 - role.name().length()) +
 				d;
 	}
 }

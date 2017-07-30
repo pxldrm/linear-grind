@@ -4,12 +4,12 @@
 *	
 *	@author		pxldrm
 *	@since		7/11/2017
-* 	@update 	7/14/2017
+* 	@update 	7/24/2017
 */
 //************************************************************
 package item;
 import data.Global;
-import data.Type;
+import game.Type;
 public class Base {
 //************************************************************
 /**
@@ -60,5 +60,38 @@ public class Base {
 	}
 	public int[] 		elementList(){
 		return elementList;
+	}
+//************************************************************
+/**
+*	Booleans
+*/
+//************************************************************
+	public boolean 		isArmor()
+	{
+		if (this.getClass().equals(Armor.class))
+			return true;
+		else
+			return false;
+	}
+	public boolean 		isItem()
+	{
+		if (this.getClass().equals(Item.class))
+			return true;
+		else
+			return false;
+	}
+	public boolean 		isSkill()
+	{
+		if (this.getClass().equals(Skill.class))
+			return true;
+		else
+			return false;
+	}
+	public boolean 		isWeapon()
+	{
+		if (this.getClass().equals(Weapon.class))
+			return true;
+		else
+			return false;
 	}
 }

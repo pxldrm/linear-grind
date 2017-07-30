@@ -4,31 +4,33 @@
 *	
 *	@author		pxldrm
 *	@since		7/13/2017
-* 	@update 	7/17/2017
+* 	@update 	7/22/2017
 */
 //************************************************************
 package data;
 import battler.*;
+import calc.Behavior;
+import game.Role;
+import game.Type;
 import item.*;
 import scene.*;
 public class Global {
-//************************************************************
-/**
-*	Variables
-*/
-//************************************************************
-	//Data
+//Data
 	public static Behavior[] 	behaviors;
 	public static Role[] 		roles;
 	//Types
+	public static Type[] 		accessoryTypes;
 	public static Type[] 		armorTypes;
 	public static Type[] 		attributeTypes;
+	public static Type[] 		bodyTypes;
 	public static Type[] 		damageTypes;
 	public static Type[] 		effectTypes;
 	public static Type[] 		elementTypes;
 	public static Type[] 		enemyTypes;
+	public static Type[] 		helmetTypes;
 	public static Type[] 		itemTypes;
 	public static Type[] 		mapTypes;
+	public static Type[] 		shieldTypes;
 	public static Type[] 		shopTypes;
 	public static Type[] 		skillTypes;
 	public static Type[] 		weaponTypes;
@@ -43,15 +45,4 @@ public class Global {
 	//Scenes
 	public static Shop[] 		shops;
 	public static Map[] 		maps;
-//************************************************************
-/**
-*	Methods (don't belong here)
-*/
-//************************************************************
-	public static String 		spaces(int len){
-		String spaces = "";
-		for (int i = 0; i < len; i++)
-			spaces += " ";
-		return spaces;
-	}
 }

@@ -13,6 +13,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import battler.*;
+import calc.Behavior;
+import display.Message;
+import game.Role;
+import game.Type;
 import item.*;
 import scene.Map;
 import scene.Shop;
@@ -29,8 +33,6 @@ public class DBImport extends DBConnector{
 */
 //************************************************************
 	public static void 		importDatabase() throws SQLException{
-		System.out.println("Loading...");
-
 		for (String s: tableData){
 			connect(dbData, s);
 		}
@@ -97,10 +99,11 @@ public class DBImport extends DBConnector{
 	        temp.clear();
 	    }
 	    catch (SQLException e ) {
-			System.err.println(e.getMessage());
+			Message.showMessage("Failed to fetch result set from " + table + ".");
 	    }
 	    finally {
-	        if (stmt != null) { stmt.close(); }
+	        if (stmt != null)
+	        	stmt.close();
 	    }
 	}
 //************************************************************
@@ -178,7 +181,8 @@ public class DBImport extends DBConnector{
     					rs.getInt("earth"),
     					rs.getInt("light"),
     					rs.getInt("dark")},
-    			rs.getInt("armorType")));
+    			rs.getInt("armorType"),
+    			rs.getInt("weightType")));
 	}
 	private static void 	createItem(ResultSet rs) throws SQLException{
     	temp.add(new Item(
@@ -283,6 +287,8 @@ public class DBImport extends DBConnector{
     			new int[]{
     					rs.getInt("mhp"),
     					rs.getInt("mmp"),
+    					rs.getInt("mhp"),
+    					rs.getInt("mmp"),
     					rs.getInt("atk"),
     					rs.getInt("def"),
     					rs.getInt("mat"),
@@ -312,6 +318,8 @@ public class DBImport extends DBConnector{
     			rs.getRow() - 1,
     			rs.getString("name"),
     			new int[]{
+    					rs.getInt("mhp"),
+    					rs.getInt("mmp"),
     					rs.getInt("mhp"),
     					rs.getInt("mmp"),
     					rs.getInt("atk"),
@@ -374,26 +382,34 @@ public class DBImport extends DBConnector{
     		roleArray();
         //copy temp to type arrays
         if (table.contentEquals(tableTypes[0]))
-        	Global.armorTypes 		= typeArray();
+        	Global.accessoryTypes 	= typeArray();
         if (table.contentEquals(tableTypes[1]))
-        	Global.attributeTypes 	= typeArray();
+        	Global.armorTypes 		= typeArray();
         if (table.contentEquals(tableTypes[2]))
-        	Global.damageTypes 		= typeArray();
+        	Global.attributeTypes 	= typeArray();
         if (table.contentEquals(tableTypes[3]))
-        	Global.effectTypes 		= typeArray();
+        	Global.bodyTypes 	= typeArray();
         if (table.contentEquals(tableTypes[4]))
-        	Global.elementTypes 	= typeArray();
+        	Global.damageTypes 		= typeArray();
         if (table.contentEquals(tableTypes[5]))
-        	Global.enemyTypes 		= typeArray();
+        	Global.effectTypes 		= typeArray();
         if (table.contentEquals(tableTypes[6]))
-        	Global.itemTypes 		= typeArray();
+        	Global.elementTypes 	= typeArray();
         if (table.contentEquals(tableTypes[7]))
-        	Global.mapTypes 		= typeArray();
+        	Global.enemyTypes 		= typeArray();
         if (table.contentEquals(tableTypes[8]))
-        	Global.shopTypes 		= typeArray();
+        	Global.helmetTypes 	= typeArray();
         if (table.contentEquals(tableTypes[9]))
-        	Global.skillTypes 		= typeArray();
+        	Global.itemTypes 		= typeArray();
         if (table.contentEquals(tableTypes[10]))
+        	Global.mapTypes 		= typeArray();
+        if (table.contentEquals(tableTypes[11]))
+        	Global.shieldTypes 	= typeArray();
+        if (table.contentEquals(tableTypes[12]))
+        	Global.shopTypes 		= typeArray();
+        if (table.contentEquals(tableTypes[13]))
+        	Global.skillTypes 		= typeArray();
+        if (table.contentEquals(tableTypes[14]))
         	Global.weaponTypes 		= typeArray();
         //copy temp to item arrays
         if (table.contentEquals(tableItems[0]))

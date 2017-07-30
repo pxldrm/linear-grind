@@ -7,7 +7,10 @@
 * 	@update 	7/17/2017
 */
 //************************************************************
-package data;
+package game;
+
+import display.Base;
+
 public class Role {
 //************************************************************
 /**
@@ -67,22 +70,22 @@ public class Role {
 		String c = "";
 		String d = "";
 		for (int i = 0; i < attributeList.length; i++){
-			a += attributeList[i] 	+ Global.spaces(3 - String.valueOf(attributeList[i]).length());
+			a += attributeList[i] 	+ Base.space(3 - String.valueOf(attributeList[i]).length());
 		}
 		for (int i = 0; i < elementList.length; i++){
-			b += elementList[i] 	+ Global.spaces(4 - String.valueOf(elementList[i]).length());
+			b += elementList[i] 	+ Base.space(4 - String.valueOf(elementList[i]).length());
 		}
 		for (int i = 0; i < skillLearned.length; i++){
-			c += skillLearned[i] 	+ Global.spaces(3 - String.valueOf(skillLearned[i]).length());
+			c += skillLearned[i] 	+ Base.space(3 - String.valueOf(skillLearned[i]).length());
 		}
 		for (int i = 0; i < lvLearned.length; i++){
-			d += lvLearned[i] 		+ Global.spaces(3 - String.valueOf(lvLearned[i]).length());
+			d += lvLearned[i] 		+ Base.space(3 - String.valueOf(lvLearned[i]).length());
 		}
-		return 	id 					+ Global.spaces(3 - String.valueOf(id).length()) +
-				name 				+ Global.spaces(20 - name.length()) +
-				a 					+ Global.spaces(30 - a.length()) +
-				b 					+ Global.spaces(50 - b.length()) +
-				c 					+ Global.spaces(50 - b.length()) +
+		return 	id 					+ Base.space(3 - String.valueOf(id).length()) +
+				name 				+ Base.space(20 - name.length()) +
+				a 					+ Base.space(30 - a.length()) +
+				b 					+ Base.space(50 - b.length()) +
+				c 					+ Base.space(50 - b.length()) +
 				d;
 	}
 }

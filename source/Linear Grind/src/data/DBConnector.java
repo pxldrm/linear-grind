@@ -10,6 +10,8 @@
 package data;
 import java.sql.Connection;
 import java.sql.DriverManager;
+
+import display.Message;
 public class DBConnector {
 //************************************************************
 /**
@@ -32,14 +34,18 @@ public class DBConnector {
 													"roles"};
 	//Type table definitions
 	protected static final String[] tableTypes 		= {
+													"accessoryTypes",
 													"armorTypes",
 													"attributeTypes",
+													"bodyTypes",
 													"damageTypes",
 													"effectTypes",
 													"elementTypes",
 													"enemyTypes",
+													"helmetTypes",
 													"itemTypes",
 													"mapTypes",
+													"shieldTypes",
 													"shopTypes",
 													"skillTypes",
 													"weaponTypes",};
@@ -71,7 +77,7 @@ public class DBConnector {
 			return conn;
 		}
 		catch(Exception e) {
-			System.err.println(e.getMessage());
+			Message.showMessage("Failed to open database.");
 			return null;
 		}
 		finally {
@@ -80,7 +86,7 @@ public class DBConnector {
 				conn.close();
 			}
 			catch(Exception e) {
-				System.err.println(e);
+				Message.showMessage("Failed to close database.");
 			}
 		}
 	}

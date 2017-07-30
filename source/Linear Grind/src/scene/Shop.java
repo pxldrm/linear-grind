@@ -9,7 +9,7 @@
 //************************************************************
 package scene;
 import data.Global;
-import data.Type;
+import game.Type;
 import item.*;
 public class Shop extends Base{
 //************************************************************
@@ -89,12 +89,12 @@ public class Shop extends Base{
 		String a = "";
 		for (int i = 0; i < itemList.length; i++){
 			if (itemList[i] != null)
-				a += itemList[i].name() 		+ Global.spaces(25 - itemList[i].name().length());
+				a += itemList[i].name() 		+ display.Base.space(25 - itemList[i].name().length());
 		}
-		return 	id 					+ Global.spaces(3 - String.valueOf(id).length()) +
-				name 				+ Global.spaces(20 - name.length()) +
-				shopType.name() 	+ Global.spaces(15 - shopType.name().length()) +
-				priceRate 			+ Global.spaces(5 - String.valueOf(priceRate).length()) +
+		return 	id 					+ display.Base.space(3 - String.valueOf(id).length()) +
+				name 				+ display.Base.space(20 - name.length()) +
+				shopType.name() 	+ display.Base.space(15 - shopType.name().length()) +
+				priceRate 			+ display.Base.space(5 - String.valueOf(priceRate).length()) +
 				a;
 	}
 }

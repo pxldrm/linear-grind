@@ -1,0 +1,222 @@
+
+
+*****************************************
+
+*              DATA DUMP                *
+
+*****************************************
+===================================BEHAVIORS
+0    80  0   0   10  10            0  0  0  0  0       0  0  0  0  0  
+1    80  0   0   10  10            0  0  0  0  0       0  0  0  0  0  
+2    80  0   0   10  10            0  0  0  0  0       0  0  0  0  0  
+===================================ROLES
+0  None                10 1  1  1  1  1  1  1        0   0   0   0   0   0   0   0   0   0   0         -1 -1 -1 -1 -1 -1       -1 -1 -1 -1 -1 -1 
+1  Traveler            10 1  1  1  1  1  1  1        0   0   0   0   0   0   0   0   0   0   0         -1 -1 -1 -1 -1 -1       -1 -1 -1 -1 -1 -1 
+2  Brawler             10 1  1  1  1  1  1  1        0   0   0   0   0   0   0   0   0   0   0         -1 -1 -1 -1 -1 -1       -1 -1 -1 -1 -1 -1 
+3  Sprinter            10 1  1  1  1  1  1  1        0   0   0   0   0   0   0   0   0   0   0         8  -1 -1 -1 -1 -1       1  -1 -1 -1 -1 -1 
+4  Conjurer            10 1  1  1  1  1  1  1        0   0   0   0   0   0   0   0   0   0   0         3  4  5  6  7  8        1  1  1  1  1  1  
+===================================ACCESSORY TYPES
+0  Universal
+===================================ARMOR TYPES
+0  Shield
+1  Head
+2  Body
+3  Accessory
+===================================ATTRIBUTE TYPES
+0  hp
+1  mp
+2  mhp
+3  mmp
+4  atk
+5  def
+6  mat
+7  mdf
+8  agi
+9  luk
+10 lv
+11 exp
+12 gold
+===================================BODY TYPES
+0  Light Armor
+1  Medium Armor
+2  Heavy Armor
+3  Universal Armor
+===================================DAMAGE TYPES
+0  None
+1  Physical
+2  Magical
+===================================EFFECT TYPES
+0  None
+1  HP Damage
+2  HP Recovery
+3  MP Recovery
+4  Defend
+5  Escape
+6  Paralyze
+===================================ELEMENT TYPES
+0  None
+1  Bare
+2  Slice
+3  Stab
+4  Blow
+5  Fire
+6  Water
+7  Air
+8  Earth
+9  Light
+10 Dark
+===================================ENEMY TYPES
+0  None
+1  Enemy
+2  Boss
+===================================HELMET TYPES
+0  Light Helmet
+1  Medium Helmet
+2  Heavy Helmet
+3  Universal Helmet
+===================================ITEM TYPES
+0  Normal
+1  Key
+===================================MAP TYPES
+0  World
+1  Dungeon
+2  Town
+===================================SHIELD TYPES
+0  Light Shield
+1  Medium Shield
+2  Heavy Shield
+3  Universal Shield
+===================================SHOP TYPES
+0  Armor
+1  Item
+2  Weapon
+3  Inn
+===================================SKILL TYPES
+0  Command
+1  Skill
+2  Magic
+===================================WEAPON TYPES
+0  Knife
+1  Sword
+2  Axe
+3  Spear
+4  Club
+===================================ARMORS
+0  Buckler             25        None                0    0    0    1    0    2    0    0         0   0   0   0   0   5   5   5   5   5   5         Shield         Light Shield
+1  Small Shield        75        None                0    0    0    5    0    4    0    0         0   0   0   0   0   10  10  10  10  10  10        Shield         Light Shield
+2  Wooden Shield       40        None                0    0    0    2    0    0    0    0         0   5   5   5   5   0   0   0   25  0   0         Shield         Medium Shield
+3  Leather Shield      80        None                0    0    0    4    0    0    0    0         0   5   5   5   5   0   0   0   0   0   0         Shield         Medium Shield
+4  Fire Shield         160       None                0    0    0    5    0    2    0    0         0   5   5   5   5   50  0   0   0   0   0         Shield         Medium Shield
+5  Iron Shield         120       None                0    0    0    5    0    0    0    0         0   10  10  10  10  0   0   0   25  0   0         Shield         Heavy Shield
+6  Kite Shield         240       None                0    0    0    7    0    0    0    0         0   10  10  10  10  0   0   0   0   0   0         Shield         Heavy Shield
+7  Magic Shield        0         None                0    0    0    8    0    8    0    0         0   5   5   5   5   10  10  10  10  10  10        Shield         Universal Shield
+8  Lucky Coin          10000     None                0    0    0    0    0    0    0    255       0   0   0   0   0   0   0   0   0   0   0         Shield         Universal Shield
+9  Bandana             10        None                0    0    0    1    0    0    1    5         0   0   0   0   0   0   0   0   0   0   0         Head           Light Helmet
+10 Headband            30        None                0    0    0    2    0    0    1    10        0   0   0   0   0   0   0   0   0   0   0         Head           Light Helmet
+11 Leather Helmet      20        None                0    0    0    3    0    0    0    0         0   3   3   3   3   0   0   0   0   0   0         Head           Medium Helmet
+12 Fire Helmet         40        None                0    0    0    4    0    2    0    0         0   3   3   3   3   25  0   0   0   0   0         Head           Medium Helmet
+13 Chain Helmet        80        None                0    0    0    5    0    0    0    0         0   3   3   3   3   0   0   0   0   0   0         Head           Medium Helmet
+14 Iron Helmet         60        None                0    0    0    6    0    0    0    0         0   5   5   5   5   0   0   0   10  0   0         Head           Heavy Helmet
+15 Knight Helmet       120       None                0    0    0    8    0    0    0    0         0   5   5   5   5   0   0   0   0   0   25        Head           Heavy Helmet
+16 Magic Helmet        0         None                0    0    0    7    0    7    0    0         0   5   3   3   3   5   5   5   5   5   5         Head           Universal Helmet
+17 Magic Hat           10000     None                0    0    0    0    255  0    0    0         0   0   0   0   0   0   0   0   0   0   0         Head           Universal Helmet
+18 Tunic               30        None                0    0    0    1    0    1    0    0         0   0   0   0   0   10  10  10  10  10  10        Body           Light Armor
+19 Cloth Armor         60        None                0    0    0    3    0    3    0    0         0   0   0   0   0   10  10  10  10  10  10        Body           Light Armor
+20 Leather Armor       120       None                0    0    0    5    0    0    0    0         0   10  10  10  10  0   25  25  0   0   0         Body           Medium Armor
+21 Fire Armor          500       None                0    0    0    7    0    5    0    0         0   25  25  25  25  100 0   0   0   0   0         Body           Medium Armor
+22 Chain Mail          1000      None                0    0    0    10   0    0    0    0         0   25  25  25  25  -50 0   0   0   0   0         Body           Medium Armor
+23 Scale Mail          750       None                0    0    0    8    0    0    0    0         0   50  50  50  50  0   0   0   25  0   0         Body           Heavy Armor
+24 Iron Armor          1500      None                0    0    0    12   0    0    0    0         0   50  50  50  50  -50 0   0   50  0   0         Body           Heavy Armor
+25 Magic Armor         0         None                0    0    0    15   0    15   0    0         0   25  25  25  25  50  50  50  50  50  50        Body           Universal Armor
+26 Wombat Suit         1000000   None                9999 999  255  255  255  255  255  255       0   0   0   0   0   0   0   0   0   0   0         Body           Universal Armor
+27 Hard Ring           250       None                0    0    0    0    0    0    0    0         0   33  33  33  33  0   0   0   0   0   0         Accessory      Universal
+28 Fire Ring           250       None                0    0    0    0    0    0    0    0         0   0   0   0   0   50  0   0   0   0   0         Accessory      Universal
+29 Water Ring          250       None                0    0    0    0    0    0    0    0         0   0   0   0   0   0   50  0   0   0   0         Accessory      Universal
+30 Air Ring            250       None                0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   50  0   0   0         Accessory      Universal
+31 Earth Ring          250       None                0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   50  0   0         Accessory      Universal
+32 Light Ring          250       None                0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   50  0         Accessory      Universal
+33 Dark Ring           250       None                0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   50        Accessory      Universal
+34 Null Ring           1000      None                0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   0         Accessory      Universal
+35 Quick Boots         10000     None                0    0    0    0    0    0    255  0         0   0   0   0   0   0   0   0   0   0   0         Accessory      Universal
+===================================ITEMS
+0  Herb                10        HP Recovery         0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   0         Normal         None      25
+1  Tonic               25        HP Recovery         100  0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   0         Normal         None      50
+2  Potion              100       HP Recovery         0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   0         Normal         None      150
+3  Elixir              500       HP Recovery         0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   0         Normal         None      500
+===================================SKILLS
+0  Attack              0         HP Damage           0    0    0    0    0    0    0    0         0   100 0   0   0   0   0   0   0   0   0         Command        Physical  2
+1  Defend              0         Defend              0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   0         Command        None      0
+2  Escape              0         Escape              0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   0         Command        None      0
+3  Burn                5         HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   100 0   0   0   0   0         Magic          Magical   6
+4  Freeze              5         HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   0   100 0   0   0   0         Magic          Magical   6
+5  Aircutter           5         HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   100 0   0   0         Magic          Magical   6
+6  Quake               10        HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   100 0   0         Magic          Magical   10
+7  Cure                3         HP Recovery         0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   100 0         Magic          Magical   6
+8  Paralyze            5         Paralyze            0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   0   0   0   100       Magic          None      0
+9  Swing               0         HP Damage           0    0    0    0    0    0    0    0         0   100 0   0   0   0   0   0   0   0   0         Command        Physical  3
+10 Slice               0         HP Damage           0    0    0    0    0    0    0    0         0   0   100 0   0   0   0   0   0   0   0         Command        Physical  3
+11 Stab                0         HP Damage           0    0    0    0    0    0    0    0         0   0   0   100 0   0   0   0   0   0   0         Command        Physical  2
+12 Tail                0         HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   100 0   0   0   0   0   0         Command        Physical  3
+13 Cyclone             10        HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   0   0   100 0   0   0         Magic          Magical   10
+14 Fire Breath         10        HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   100 0   0   0   0   0         Magic          Magical   10
+15 Quasar              10        HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   100 0   0   0   0   0         Magic          Magical   10
+===================================WEAPONS
+0  Wooden Sword        100       None                0    0    3    0    0    0    0    0         0   0   100 0   0   0   0   0   0   0   0         Sword          Physical  
+1  Bronze Spear        500       None                0    0    5    0    0    0    0    0         0   0   0   100 0   0   0   0   0   0   0         Spear          Physical  
+2  Wooden Club         800       None                0    0    8    0    0    0    0    0         0   0   0   0   100 0   0   0   0   0   0         Club           Physical  
+3  Javelin             2000      None                0    0    10   0    0    0    0    0         0   0   0   100 0   0   0   0   0   0   0         Spear          Physical  
+4  Iron Axe            2500      None                0    0    13   0    0    0    0    0         0   0   50  0   50  0   0   0   0   0   0         Axe            Physical  
+5  Spike Club          5000      None                0    0    16   0    0    0    0    0         0   0   0   50  50  0   0   0   0   0   0         Club           Physical  
+6  Magic Sword         0         None                0    0    15   0    15   0    0    0         0   0   100 0   0   0   0   0   0   0   0         Sword          Magical   
+===================================ACTORS
+0  Line      50  5   50  5   5   5   3   2   3   2   100 100 100 100 100 100 100 100 100 100 100                                                                   1  0     Traveler  
+1  Gorg      70  0   70  0   7   5   1   3   1   2   100 125 125 125 125 75  75  75  75  75  75                                                                    1  0     Brawler   
+2  Text      40  5   40  5   4   3   1   2   7   4   100 100 100 100 100 100 100 100 100 100 100       Paralyze                                                    1  0     Sprinter  
+3  Page      40  10  40  10  3   3   5   4   3   2   100 75  75  75  75  125 125 125 125 125 125       Burn      Freeze    Aircutter Quake     Cure      Paralyze  1  0     Conjurer  
+===================================ENEMIES
+0  Slime                    12    0     12    0     4     4     2     2     2     1     100 100 200 50  100 100 100 100 100 100 50        Attack         Defend         Escape                                       1  2     Enemy     2                                   Herb                                              0 0 0 
+1  R. Slime                 16    0     16    0     4     5     2     2     2     1     100 100 200 50  100 100 100 100 100 100 50        Attack         Defend         Escape                                       1  4     Enemy     4                                   Herb                                              0 0 0 
+2  Scorpion                 24    0     24    0     5     3     2     2     8     1     100 100 100 50  50  50  100 100 200 100 50        Stab           Defend         Escape                                       2  6     Enemy     6                                   Tonic                                             0 0 0 
+3  Kobold                   32    0     32    0     6     5     2     2     2     1     100 150 125 75  75  50  100 100 100 100 50        Slice          Defend         Escape                                       2  12    Enemy     20    Cloth Armor                                       Wooden Sword                  0 0 0 
+4  Imp                      64    20    64    20    7     2     3     5     6     1     100 75  75  75  50  150 150 150 150 50  50        Slice          Defend         Escape                                       3  8     Enemy     12                                                      Bronze Spear                  0 0 0 
+5  Ogre                     80    10    80    10    8     4     2     2     3     1     100 150 75  75  125 50  50  50  150 50  50        Attack         Swing          Quake          Defend         Escape         3  15    Enemy     0     Cloth Armor                                       Wooden Club                   0 0 0 
+6  Beholder                 120   20    120   20    12    8     4     4     6     5     100 150 125 100 75  25  25  25  25  25  50        Stab           Slice          Aircutter      Defend         Escape         4  20    Enemy     15    Leather Armor                 Potion                                            0 0 0 
+7  Gorgon                   300   20    300   20    15    15    4     2     1     3     100 150 125 100 75  25  25  25  25  25  50        Swing          Quake          Defend         Escape                        4  10    Enemy     100   Scale Mail                    Elixir                                            0 0 0 
+8  Wyvern                   700   70    700   70    20    7     7     7     7     7     100 200 75  0   125 400 0   200 200 100 50        Slice          Stab           Tail           Aircutter      Cyclone        5  200   Boss      500                                                                                   0 0 0 
+9  Armored Lizard           520   0     520   0     25    10    2     4     6     4     100 200 150 50  100 75  25  100 100 100 50        Slice                                                                      6  50    Enemy     50    Iron Armor                                        Iron Axe                      0 0 0 
+10 G. Slime                 120   0     120   0     40    40    2     2     2     4     100 100 200 50  100 100 100 100 100 100 50        Attack                                                                     6  100   Enemy     1000  Fire Armor                                                                      0 0 0 
+11 Berserker                1000  0     1000  0     30    7     1     2     7     5     100 200 175 125 100 50  50  50  50  50  50        Attack         Swing          Slice          Stab                          7  60    Enemy     120                                 Potion              Spike Club                    0 0 0 
+12 Succubus                 500   130   500   130   35    7     13    13    13    13    100 75  75  75  50  200 200 200 200 200 200       Slice          Stab           Paralyze                                     7  120   Enemy     60                                  Tonic     Elixir                                  0 0 0 
+13 Demon                    2000  50    2000  50    43    28    13    13    13    13    100 200 50  50  50  200 0   0   100 50  200       Slice          Stab           Tail           Paralyze       Quasar         8  280   Enemy     280                                 Elixir                                            0 0 0 
+14 R. Dragon                3000  150   3000  150   48    25    13    10    25    10    100 200 75  0   125 400 0   200 200 100 50        Swing          Tail           Fire Breath                                  9  500   Enemy     500                                 Elixir                                            0 0 0 
+15 Dark Lord                10000 255   10000 255   60    15    15    15    30    255   100 100 25  75  50  150 0   0   75  50  200       Swing          Burn           Freeze         Aircutter      Quake          10 2000  Boss      2000                                                                                  0 0 0 
+16 Dark Lord: Final Form    14000 255   14000 255   64    19    14    4     40    32    100 100 25  75  50  150 0   0   75  50  200       Cyclone        Fire Breath    Quasar         Paralyze       Tail           11 5000  Boss      5000                                                                                  0 0 0 
+17 Demon Princess           1     0     1     0     500   1     1     1     1     255   0   0   0   0   0   0   0   0   0   0   0         Swing                                                                      12 0     Enemy     0                                                                                     0 0 0 
+18 Wombat                   20000 255   20000 255   80    25    100   1     25    255   100 150 50  100 75  0   200 50  200 100 100       Swing          Tail           Slice          Cure           Stab           13 0     Boss      0                                                                                     0 0 0 
+===================================MAPS
+0  Green Field         Dungeon        Slime                    R. Slime                 65  35    armorShopA     itemShopA      weaponShopA    innA           
+1  Kobold Forest       Dungeon        Scorpion                 Kobold                   65  35    armorShopA     itemShopA      weaponShopA    innA           
+2  Ogre Camp           Dungeon        Imp                      Ogre                     65  35    armorShopA     itemShopA      weaponShopA    innA           
+3  Dark Dungeon        Dungeon        Beholder                 Gorgon                   80  20    armorShopB     itemShopB      weaponShopB    innA           
+4  Wyvern's Lair       Dungeon        Wyvern                                            100 0     
+5  Winding Path        Dungeon        Armored Lizard           G. Slime                 90  10    armorShopB     itemShopB      weaponShopB    innB           
+6  Cemetery            Dungeon        Berserker                Succubus                 50  50    armorShopB     itemShopB      weaponShopB    innB           
+7  Castle Gate         Dungeon        Demon                                             100 0     armorShopC     itemShopC      weaponShopC    innC           
+8  Throne Room         Dungeon        R. Dragon                                         100 0     armorShopC     itemShopC      weaponShopC    innC           
+9  Dark Lord's Chamber Dungeon        Dark Lord                                         100 0     
+10 Void                Dungeon        Dark Lord: Final Form                             100 0     
+11 Treasure Chamber    Dungeon        Demon Princess                                    100 0     
+12 Wombat's Lair       Dungeon        Wombat                                            100 0     
+===================================SHOPS
+0  armorShopA          Armor          100  Buckler                  
+1  armorShopB          Armor          100  Small Shield             Wooden Shield            
+2  armorShopC          Armor          100  Fire Shield              
+3  itemShopA           Item           100  Herb                     Tonic                    
+4  itemShopB           Item           100  Tonic                    Potion                   
+5  itemShopC           Item           100  Elixir                   
+6  weaponShopA         Weapon         100  Wooden Sword             
+7  weaponShopB         Weapon         100  Bronze Spear             Wooden Club              
+8  weaponShopC         Weapon         100  Spike Club               
+9  innA                Inn            100  
+10 innB                Inn            150  
+11 innC                Inn            200  

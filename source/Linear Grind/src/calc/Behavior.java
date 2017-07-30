@@ -7,7 +7,10 @@
 * 	@update 	7/17/2017
 */
 //************************************************************
-package data;
+package calc;
+
+import display.Base;
+
 public class Behavior {
 //************************************************************
 /**
@@ -56,17 +59,17 @@ public class Behavior {
 		String b = "";
 		String c = "";
 		for (int i = 0; i < probability.length; i++){
-			a += probability[i] 	+ Global.spaces(4 - String.valueOf(probability[i]).length());
+			a += probability[i] 	+ Base.space(4 - String.valueOf(probability[i]).length());
 		}
 		for (int i = 0; i < turnCount.length; i++){
-			b += turnCount[i] 		+ Global.spaces(3 - String.valueOf(turnCount[i]).length());
+			b += turnCount[i] 		+ Base.space(3 - String.valueOf(turnCount[i]).length());
 		}
 		for (int i = 0; i < condition.length; i++){
-			c += condition[i] 		+ Global.spaces(3 - String.valueOf(condition[i]).length());
+			c += condition[i] 		+ Base.space(3 - String.valueOf(condition[i]).length());
 		}
-		return 	id 					+ Global.spaces(5 - String.valueOf(id).length()) +
-				a 					+ Global.spaces(30 - a.length()) +
-				b 					+ Global.spaces(20 - b.length()) +
+		return 	id 					+ Base.space(5 - String.valueOf(id).length()) +
+				a 					+ Base.space(30 - a.length()) +
+				b 					+ Base.space(20 - b.length()) +
 				c;
 	}
 }

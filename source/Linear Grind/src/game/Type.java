@@ -7,7 +7,10 @@
 * 	@update 	7/17/2017
 */
 //************************************************************
-package data;
+package game;
+
+import display.Base;
+
 public class Type {
 //************************************************************
 /**
@@ -42,7 +45,7 @@ public class Type {
 */
 //************************************************************
 	public String 			toString(){
-		return 	id 			+ Global.spaces(3 - String.valueOf(id).length()) +
+		return 	id 			+ Base.space(3 - String.valueOf(id).length()) +
 				name;
 	}
 }
