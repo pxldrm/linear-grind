@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/22/2017
-* 	@update 	7/28/2017
+* 	@update 	7/30/2017
 */
 //************************************************************
 package display;
@@ -36,11 +36,17 @@ public class Vocab {
 	public static final String next 		= "next";
 	//menu vocab
 	public static final String equipment 	= "equipment";
-	public static final String weapon 		= "weapon";
-	public static final String shield 		= "shield";
-	public static final String helmet 		= "helmet";
-	public static final String armor 		= "armor";
-	public static final String accessory1 	= "accessory";
-	public static final String accessory2 	= "accessory";
 	public static final String empty 		= "empty";
+	public static final String weapon 		= Global.equipmentTypes[0].name();
+	public static final String shield 		= Global.equipmentTypes[1].name();
+	public static final String helmet 		= Global.equipmentTypes[2].name();
+	public static final String armor 		= Global.equipmentTypes[3].name();
+	public static final String accessory1 	= Global.equipmentTypes[4].name();
+	public static final String accessory2 	= Global.equipmentTypes[4].name();
+	public static final String[] equipmentList = {	weapon,
+													shield,
+													helmet,
+													armor,
+													accessory1,
+													accessory2};
 }

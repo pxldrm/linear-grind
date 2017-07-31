@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	7/17/2017
+* 	@update 	7/30/2017
 */
 //************************************************************
 package battler;
@@ -28,13 +28,13 @@ public class Actor extends Base{
 		this.role 		= Global.roles[role];
 		for (int i = 0; i < this.role.skillLearned().length; i++){
 			if (this.role.skillLearned()[i] != -1 && this.role.lvLearned()[i] != -1 && this.lv >= this.role.lvLearned()[i])
-				this.skillList[i] 	= Global.skills[this.role.skillLearned()[i]];
+				this.skillList[i] 		= Global.skills[this.role.skillLearned()[i]];
 		}
 		this.equipmentList 		= new item.Base[equipmentList.length];
-		if (equipmentList[0] != -1)
-			this.equipmentList[0] 	= Global.weapons[equipmentList[0]];
-		if (equipmentList[1] != -1)
-			this.equipmentList[1] 	= Global.armors[equipmentList[1]];
+		for (int i = 0; i < this.equipmentList.length; i++){
+			if (equipmentList[i] != -1)
+				this.equipmentList[i] 	= Global.weapons[equipmentList[i]];
+		}
 	}
 //************************************************************
 /**

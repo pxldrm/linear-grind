@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/22/2017
-* 	@update 	7/27/2017
+* 	@update 	7/30/2017
 */
 //************************************************************
 package debug;
@@ -77,6 +77,10 @@ public class Debugger{
 	    for(int i = 0; i < Global.enemyTypes.length; i++){
 	    	System.out.println(Global.enemyTypes[i].toString());
 	    }
+    	System.out.println("===================================EQUIPMENT TYPES");
+	    for(int i = 0; i < Global.equipmentTypes.length; i++){
+	    	System.out.println(Global.equipmentTypes[i].toString());
+	    }
     	System.out.println("===================================HELMET TYPES");
 	    for(int i = 0; i < Global.helmetTypes.length; i++){
 	    	System.out.println(Global.helmetTypes[i].toString());
@@ -147,11 +151,25 @@ public class Debugger{
 		Party.addMember(Global.actors[2]);
 		Party.addMember(Global.actors[3]);
 		
-		Party.members()[0].equipmentList()[0] = Global.weapons[0];
-		Party.members()[0].equipmentList()[1] = Global.armors[0];
+		Party.members()[0].equipmentList()[0] = Global.weapons[3];
+		Party.members()[0].equipmentList()[1] = Global.armors[2];
+		Party.members()[0].equipmentList()[2] = Global.armors[11];
+		Party.members()[0].equipmentList()[3] = Global.armors[20];
+		Party.members()[0].equipmentList()[4] = Global.armors[28];
+		Party.members()[0].equipmentList()[5] = Global.armors[29];
 		
-		Party.members()[2].equipmentList()[0] = Global.weapons[3];
-		Party.members()[2].equipmentList()[1] = Global.armors[4];
+		Party.members()[1].equipmentList()[0] = Global.weapons[6];
+
+		
+		Party.members()[2].equipmentList()[0] = Global.weapons[0];
+		Party.members()[2].equipmentList()[1] = Global.armors[0];
+		Party.members()[2].equipmentList()[2] = Global.armors[9];
+		Party.members()[2].equipmentList()[3] = Global.armors[18];
+		Party.members()[2].equipmentList()[4] = Global.armors[30];
+		Party.members()[2].equipmentList()[5] = Global.armors[31];
+		
+		Party.members()[3].equipmentList()[0] = Global.weapons[13];
+
 		
 //		Party.members()[0].addHp(-10);
 

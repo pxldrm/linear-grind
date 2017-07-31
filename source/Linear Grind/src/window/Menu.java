@@ -167,17 +167,14 @@ public class Menu extends JPanel {
 						Message.close;
 				//text for actor equipment
 				e[i] = 	Message.open +
-						display.Base.htmlSpace(2) + Vocab.equipment.toUpperCase() + Message.brk +
-						display.Base.htmlSpace(2) + Vocab.weapon.toUpperCase() + ":" + display.Base.htmlSpace(11 - Vocab.weapon.length());
-				if (Party.members()[i].equipmentList()[0] != null)
-					e[i] += Party.members()[i].equipmentList()[0].name() + Message.brk;
-				else
-					e[i] += "EMPTY" + Message.brk;
-				e[i] += display.Base.htmlSpace(2) + Vocab.armor.toUpperCase() + ":" + display.Base.htmlSpace(11 - Vocab.armor.length());
-				if (Party.members()[i].equipmentList()[1] != null)
-					e[i] += Party.members()[i].equipmentList()[1].name() + Message.brk;
-				else
-					e[i] += Vocab.empty.toUpperCase() + Message.brk;
+						display.Base.htmlSpace(2) + Vocab.equipment.toUpperCase() + Message.brk;
+				for (int j = 0; j < Party.members()[i].equipmentList().length; j++){
+					e[i] += display.Base.htmlSpace(2) + Vocab.equipmentList[j].toUpperCase() + ":" + display.Base.htmlSpace(11 - Vocab.equipmentList[j].length());
+					if (Party.members()[i].equipmentList()[j] != null)
+						e[i] += Party.members()[i].equipmentList()[j].name() + Message.brk;
+					else
+						e[i] += Vocab.empty.toUpperCase() + Message.brk;
+				}
 				e[i] += Message.close;
 				//navigation buttons
 				BTN_STAT[i].addActionListener(new ActionListener() {

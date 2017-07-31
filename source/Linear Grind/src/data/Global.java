@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/13/2017
-* 	@update 	7/22/2017
+* 	@update 	7/30/2017
 */
 //************************************************************
 package data;
@@ -27,6 +27,7 @@ public class Global {
 	public static Type[] 		effectTypes;
 	public static Type[] 		elementTypes;
 	public static Type[] 		enemyTypes;
+	public static Type[] 		equipmentTypes;
 	public static Type[] 		helmetTypes;
 	public static Type[] 		itemTypes;
 	public static Type[] 		mapTypes;

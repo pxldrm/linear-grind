@@ -69,6 +69,12 @@
 0  None
 1  Enemy
 2  Boss
+===================================EQUIPMENT TYPES
+0  Weapon
+1  Shield
+2  Helmet
+3  Armor
+4  Accessory
 ===================================HELMET TYPES
 0  Light Helmet
 1  Medium Helmet
@@ -101,6 +107,7 @@
 2  Axe
 3  Spear
 4  Club
+5  Staff
 ===================================ARMORS
 0  Buckler             25        None                0    0    0    1    0    2    0    0         0   0   0   0   0   5   5   5   5   5   5         Shield         Light Shield
 1  Small Shield        75        None                0    0    0    5    0    4    0    0         0   0   0   0   0   10  10  10  10  10  10        Shield         Light Shield
@@ -161,15 +168,24 @@
 14 Fire Breath         10        HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   100 0   0   0   0   0         Magic          Magical   10
 15 Quasar              10        HP Damage           0    0    0    0    0    0    0    0         0   0   0   0   0   100 0   0   0   0   0         Magic          Magical   10
 ===================================WEAPONS
-0  Wooden Sword        100       None                0    0    3    0    0    0    0    0         0   0   100 0   0   0   0   0   0   0   0         Sword          Physical  
-1  Bronze Spear        500       None                0    0    5    0    0    0    0    0         0   0   0   100 0   0   0   0   0   0   0         Spear          Physical  
-2  Wooden Club         800       None                0    0    8    0    0    0    0    0         0   0   0   0   100 0   0   0   0   0   0         Club           Physical  
-3  Javelin             2000      None                0    0    10   0    0    0    0    0         0   0   0   100 0   0   0   0   0   0   0         Spear          Physical  
-4  Iron Axe            2500      None                0    0    13   0    0    0    0    0         0   0   50  0   50  0   0   0   0   0   0         Axe            Physical  
-5  Spike Club          5000      None                0    0    16   0    0    0    0    0         0   0   0   50  50  0   0   0   0   0   0         Club           Physical  
-6  Magic Sword         0         None                0    0    15   0    15   0    0    0         0   0   100 0   0   0   0   0   0   0   0         Sword          Magical   
+0  Bronze Knife        50        None                0    0    2    0    0    0    0    0         0   0   50  50  0   0   0   0   0   0   0         Knife          Physical  
+1  Iron Knife          100       None                0    0    4    0    0    0    0    0         0   0   50  50  0   0   0   0   0   0   0         Knife          Physical  
+2  Magic Knife         0         None                0    0    8    0    8    0    0    0         0   0   50  50  0   0   0   0   0   0   0         Knife          Magical   
+3  Wooden Sword        100       None                0    0    3    0    0    0    0    0         0   0   100 0   0   0   0   0   0   0   0         Sword          Physical  
+4  Iron Sword          200       None                0    0    6    0    0    0    0    0         0   0   100 0   0   0   0   0   0   0   0         Sword          Physical  
+5  Magic Sword         0         None                0    0    12   0    12   0    0    0         0   0   100 0   0   0   0   0   0   0   0         Sword          Magical   
+6  Iron Axe            500       None                0    0    5    0    0    0    0    0         0   0   50  0   50  0   0   0   0   0   0         Axe            Physical  
+7  Battle Axe          1000      None                0    0    10   0    0    0    0    0         0   0   50  0   50  0   0   0   0   0   0         Axe            Physical  
+8  Magic Axe           0         None                0    0    15   0    15   0    0    0         0   0   50  0   50  0   0   0   0   0   0         Axe            Magical   
+9  Bronze Spear        250       None                0    0    4    0    0    0    0    0         0   0   0   100 0   0   0   0   0   0   0         Spear          Physical  
+10 Javelin             750       None                0    0    8    0    0    0    0    0         0   0   0   100 0   0   0   0   0   0   0         Spear          Physical  
+11 Wooden Club         300       None                0    0    8    0    0    0    0    0         0   0   0   0   100 0   0   0   0   0   0         Club           Physical  
+12 Spike Club          900       None                0    0    16   0    0    0    0    0         0   0   0   50  50  0   0   0   0   0   0         Club           Physical  
+13 Wooden Staff        75        None                0    0    1    0    0    0    0    0         0   50  0   0   50  0   0   0   0   0   0         Staff          Physical  
+14 Iron Staff          150       None                0    0    3    0    0    0    0    0         0   50  0   0   50  0   0   0   0   0   0         Staff          Physical  
+15 Magic Staff         0         None                0    0    6    0    20   0    0    0         0   50  0   0   50  0   0   0   0   0   0         Staff          Magical   
 ===================================ACTORS
-0  Line      50  5   50  5   5   5   3   2   3   2   100 100 100 100 100 100 100 100 100 100 100                                                                   1  0     Traveler  
+0  Yllas     50  5   50  5   5   5   3   2   3   2   100 100 100 100 100 100 100 100 100 100 100                                                                   1  0     Traveler  
 1  Gorg      70  0   70  0   7   5   1   3   1   2   100 125 125 125 125 75  75  75  75  75  75                                                                    1  0     Brawler   
 2  Text      40  5   40  5   4   3   1   2   7   4   100 100 100 100 100 100 100 100 100 100 100       Paralyze                                                    1  0     Sprinter  
 3  Page      40  10  40  10  3   3   5   4   3   2   100 75  75  75  75  125 125 125 125 125 125       Burn      Freeze    Aircutter Quake     Cure      Paralyze  1  0     Conjurer  
@@ -214,9 +230,9 @@
 3  itemShopA           Item           100  Herb                     Tonic                    
 4  itemShopB           Item           100  Tonic                    Potion                   
 5  itemShopC           Item           100  Elixir                   
-6  weaponShopA         Weapon         100  Wooden Sword             
-7  weaponShopB         Weapon         100  Bronze Spear             Wooden Club              
-8  weaponShopC         Weapon         100  Spike Club               
+6  weaponShopA         Weapon         100  Bronze Knife             
+7  weaponShopB         Weapon         100  Iron Knife               Magic Knife              
+8  weaponShopC         Weapon         100  Magic Sword              
 9  innA                Inn            100  
 10 innB                Inn            150  
 11 innC                Inn            200  

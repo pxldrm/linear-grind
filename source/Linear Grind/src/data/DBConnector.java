@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/13/2017
-* 	@update 	7/16/2017
+* 	@update 	7/30/2017
 */
 //************************************************************
 package data;
@@ -42,6 +42,7 @@ public class DBConnector {
 													"effectTypes",
 													"elementTypes",
 													"enemyTypes",
+													"equipmentTypes",
 													"helmetTypes",
 													"itemTypes",
 													"mapTypes",

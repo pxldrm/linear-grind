@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/13/2017
-* 	@update 	7/16/2017
+* 	@update 	7/30/2017
 */
 //************************************************************
 package data;
@@ -398,18 +398,20 @@ public class DBImport extends DBConnector{
         if (table.contentEquals(tableTypes[7]))
         	Global.enemyTypes 		= typeArray();
         if (table.contentEquals(tableTypes[8]))
-        	Global.helmetTypes 	= typeArray();
+        	Global.equipmentTypes 	= typeArray();
         if (table.contentEquals(tableTypes[9]))
-        	Global.itemTypes 		= typeArray();
+        	Global.helmetTypes 	= typeArray();
         if (table.contentEquals(tableTypes[10]))
-        	Global.mapTypes 		= typeArray();
+        	Global.itemTypes 		= typeArray();
         if (table.contentEquals(tableTypes[11]))
-        	Global.shieldTypes 	= typeArray();
+        	Global.mapTypes 		= typeArray();
         if (table.contentEquals(tableTypes[12]))
-        	Global.shopTypes 		= typeArray();
+        	Global.shieldTypes 	= typeArray();
         if (table.contentEquals(tableTypes[13]))
-        	Global.skillTypes 		= typeArray();
+        	Global.shopTypes 		= typeArray();
         if (table.contentEquals(tableTypes[14]))
+        	Global.skillTypes 		= typeArray();
+        if (table.contentEquals(tableTypes[15]))
         	Global.weaponTypes 		= typeArray();
         //copy temp to item arrays
         if (table.contentEquals(tableItems[0]))
