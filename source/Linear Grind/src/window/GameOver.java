@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import display.Vocab;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.Color;
 @SuppressWarnings("serial")
 public class GameOver extends JPanel {
 //************************************************************
@@ -46,6 +47,7 @@ public class GameOver extends JPanel {
 		add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Courier New", Font.PLAIN, 20));
 		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
 		lblNewLabel.setBounds(130, 149, 203, 102);

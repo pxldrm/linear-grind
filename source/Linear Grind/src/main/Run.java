@@ -1,10 +1,10 @@
 //************************************************************
 /**
-*	RunGame 	Main driver for application.
+*	Run 		Main driver for application.
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	7/30/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package main;
@@ -12,7 +12,7 @@ import java.awt.EventQueue;
 import java.sql.SQLException;
 import data.DBImport;
 import debug.Debugger;
-public class RunGame{
+public class Run{
 //************************************************************
 /**
 *	Variables
@@ -55,12 +55,12 @@ public class RunGame{
 */
 //************************************************************
 	public static void 		main(String[] args) {
-		if (window.Base.width() < 500)
+		if (window.Base.width() < 680)
 			display.Message.showMessage("Resolution too low.");
 		else {
 			//build database
 			loadDatabase();
-			Debugger.dataDump();
+//			Debugger.dataDump();
 			//initialize game
 			Debugger.initGame();
 			//show window

@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	7/30/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package item;
@@ -28,8 +28,8 @@ public class Armor extends Base{
 *	Constructor
 */
 //************************************************************
-	public 			Armor(int id, String name, int cost, int[] effectType, int[] attributeList, int[] elementList, int armorType, int weightType){
-		super(id, name, cost, effectType, attributeList, elementList);
+	public 			Armor(int id, String name, int cost, int[] effectType, int damageType, int[] attributeList, int[] elementList, int armorType, int weightType, String description){
+		super(id, name, cost, effectType, damageType, attributeList, elementList, description);
 		this.armorType 		= Global.armorTypes[armorType];
 		if (armorType == 0)
 			this.weightType 	= Global.shieldTypes[weightType];
@@ -74,9 +74,11 @@ public class Armor extends Base{
 				name 				+ display.Base.space(20 - name.length()) +
 				cost 				+ display.Base.space(10 - String.valueOf(cost).length()) +
 				a 					+ display.Base.space(20 - a.length()) +
+				damageType.name() 	+ display.Base.space(10 - damageType.name().length()) +
 				b 					+ display.Base.space(45 - b.length()) +
 				c 					+ display.Base.space(50 - c.length()) +
 				armorType.name() 	+ display.Base.space(15 - armorType.name().length()) +
-				weightType.name();
+				weightType.name() 	+ display.Base.space(20 - weightType.name().length()) +
+				description;
 	}
 }

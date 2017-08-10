@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/13/2017
-* 	@update 	7/30/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package data;
@@ -158,8 +158,8 @@ public class DBImport extends DBConnector{
     			rs.getRow() - 1,
     			rs.getString("name"),
     			rs.getInt("cost"),
-    			new int[] {
-    					rs.getInt("effectType")},
+    			convert(rs.getString("effectType").split(",")),
+    			rs.getInt("damageType"),
     			new int[] {
     					rs.getInt("mhp"),
     					rs.getInt("mmp"),
@@ -182,15 +182,16 @@ public class DBImport extends DBConnector{
     					rs.getInt("light"),
     					rs.getInt("dark")},
     			rs.getInt("armorType"),
-    			rs.getInt("weightType")));
+    			rs.getInt("weightType"),
+    			rs.getString("description")));
 	}
 	private static void 	createItem(ResultSet rs) throws SQLException{
     	temp.add(new Item(
     			rs.getRow() - 1,
     			rs.getString("name"),
     			rs.getInt("cost"),
-    			new int[] {
-    					rs.getInt("effectType")},
+    			convert(rs.getString("effectType").split(",")),
+    			rs.getInt("damageType"),
     			new int[] {
     					rs.getInt("mhp"),
     					rs.getInt("mmp"),
@@ -213,16 +214,16 @@ public class DBImport extends DBConnector{
     					rs.getInt("light"),
     					rs.getInt("dark")},
     			rs.getInt("itemType"),
-    			rs.getInt("damageType"),
-    			rs.getInt("damageValue")));
+    			rs.getInt("damageValue"),
+    			rs.getString("description")));
 	}
 	private static void 	createSkill(ResultSet rs) throws SQLException{
     	temp.add(new Skill(
     			rs.getRow() - 1,
     			rs.getString("name"),
     			rs.getInt("cost"),
-    			new int[] {
-    					rs.getInt("effectType")},
+    			convert(rs.getString("effectType").split(",")),
+    			rs.getInt("damageType"),
     			new int[] {
     					rs.getInt("mhp"),
     					rs.getInt("mmp"),
@@ -245,16 +246,16 @@ public class DBImport extends DBConnector{
     					rs.getInt("light"),
     					rs.getInt("dark")},
     			rs.getInt("skillType"),
-    			rs.getInt("damageType"),
-    			rs.getInt("damageValue")));
+    			rs.getInt("damageValue"),
+    			rs.getString("description")));
 	}
 	private static void 	createWeapon(ResultSet rs) throws SQLException{
     	temp.add(new Weapon(
     			rs.getRow() - 1,
     			rs.getString("name"),
     			rs.getInt("cost"),
-    			new int[] {
-    					rs.getInt("effectType")},
+    			convert(rs.getString("effectType").split(",")),
+    			rs.getInt("damageType"),
     			new int[] {
     					rs.getInt("mhp"),
     					rs.getInt("mmp"),
@@ -277,7 +278,7 @@ public class DBImport extends DBConnector{
     					rs.getInt("light"),
     					rs.getInt("dark")},
     			rs.getInt("weaponType"),
-    			rs.getInt("damageType")));
+    			rs.getString("description")));
 	}
 	//battlers
 	private static void 	createActor(ResultSet rs) throws SQLException{

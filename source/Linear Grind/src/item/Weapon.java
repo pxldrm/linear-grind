@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	7/17/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package item;
@@ -17,16 +17,14 @@ public class Weapon extends Base{
 */
 //************************************************************
 	private Type 	weaponType;
-	private Type 	damageType;
 //************************************************************
 /**
 *	Constructor
 */
 //************************************************************
-	public 			Weapon(int id, String name, int cost, int[] effectType, int[] attributeList, int[] elementList, int weaponType, int damageType){
-		super(id, name, cost, effectType, attributeList, elementList);
+	public 			Weapon(int id, String name, int cost, int[] effectType, int damageType, int[] attributeList, int[] elementList, int weaponType, String description){
+		super(id, name, cost, effectType, damageType, attributeList, elementList, description);
 		this.weaponType 	= Global.weaponTypes[weaponType];
-		this.damageType 	= Global.damageTypes[damageType];
 	}
 //************************************************************
 /**
@@ -35,9 +33,6 @@ public class Weapon extends Base{
 //************************************************************
 	public Type 	weaponType(){
 		return weaponType;
-	}
-	public Type 	damageType(){
-		return damageType;
 	}
 //************************************************************
 /**
@@ -62,9 +57,10 @@ public class Weapon extends Base{
 				name 				+ display.Base.space(20 - name.length()) +
 				cost 				+ display.Base.space(10 - String.valueOf(cost).length()) +
 				a 					+ display.Base.space(20 - a.length()) +
+				damageType.name() 	+ display.Base.space(10 - damageType.name().length()) +
 				b 					+ display.Base.space(45 - b.length()) +
 				c 					+ display.Base.space(50 - c.length()) +
 				weaponType.name() 	+ display.Base.space(15 - weaponType.name().length()) +
-				damageType.name() 	+ display.Base.space(10 - damageType.name().length());
+				description;
 	}
 }

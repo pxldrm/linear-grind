@@ -4,13 +4,11 @@
 *	
 *	@author		pxldrm
 *	@since		7/22/2017
-* 	@update 	7/30/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package display;
-
 import data.Global;
-
 public class Vocab {
 //************************************************************
 /**
@@ -33,20 +31,63 @@ public class Vocab {
 	public static final String lv 			= Global.attributeTypes[10].name();
 	public static final String exp 			= Global.attributeTypes[11].name();
 	public static final String gold 		= Global.attributeTypes[12].name();
+	public static final String[] attributeList 		= {	hp,
+														mp,
+														mhp,
+														mmp,
+														atk,
+														def,
+														mat,
+														mdf,
+														agi,
+														luk,
+														lv,
+														exp,
+														gold};
+	public static final String[] elementList 		= {	Global.elementTypes[0].name(),
+														Global.elementTypes[1].name(),
+														Global.elementTypes[2].name(),
+														Global.elementTypes[3].name(),
+														Global.elementTypes[4].name(),
+														Global.elementTypes[5].name(),
+														Global.elementTypes[6].name(),
+														Global.elementTypes[7].name(),
+														Global.elementTypes[8].name(),
+														Global.elementTypes[9].name(),
+														Global.elementTypes[10].name(),};
 	public static final String next 		= "next";
 	//menu vocab
+	public static final String use 			= "use";
+	public static final String equip 		= "equip";
+	public static final String discard 		= "discard";
+	public static final String items 		= "items";
+	public static final String weapons 		= "weapons";
+	public static final String armors 		= "armor";
+	public static final String skills 		= "skills";
 	public static final String equipment 	= "equipment";
 	public static final String empty 		= "empty";
+	public static final String back 		= "back";
+	public static final String exit 		= "exit";
 	public static final String weapon 		= Global.equipmentTypes[0].name();
 	public static final String shield 		= Global.equipmentTypes[1].name();
 	public static final String helmet 		= Global.equipmentTypes[2].name();
 	public static final String armor 		= Global.equipmentTypes[3].name();
 	public static final String accessory1 	= Global.equipmentTypes[4].name();
 	public static final String accessory2 	= Global.equipmentTypes[4].name();
-	public static final String[] equipmentList = {	weapon,
-													shield,
-													helmet,
-													armor,
-													accessory1,
-													accessory2};
+	public static final String[] equipmentList 		= {	weapon,
+														shield,
+														helmet,
+														armor,
+														accessory1,
+														accessory2};
+	//main menu
+	public static final String[] MAIN_NAV_NAMES 	= {	"status",
+														"skills",
+														"inventory",
+														"options",
+														exit};
+	public static final String[] INV_NAV_NAMES 		= {	items,
+														weapons,
+														armors,
+														back};
 }

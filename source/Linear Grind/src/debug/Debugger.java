@@ -4,10 +4,11 @@
 *	
 *	@author		pxldrm
 *	@since		7/22/2017
-* 	@update 	7/30/2017
+* 	@update 	8/10/2017
 */
 //************************************************************
 package debug;
+import battler.Actor;
 import data.Global;
 import game.Party;
 public class Debugger{
@@ -146,55 +147,59 @@ public class Debugger{
 	    }
 	}
 	public static void 	initGame(){
+		//party members
 		Party.addMember(Global.actors[0]);
 		Party.addMember(Global.actors[1]);
 		Party.addMember(Global.actors[2]);
 		Party.addMember(Global.actors[3]);
-		
+		//equipment		
 		Party.members()[0].equipmentList()[0] = Global.weapons[3];
 		Party.members()[0].equipmentList()[1] = Global.armors[2];
 		Party.members()[0].equipmentList()[2] = Global.armors[11];
 		Party.members()[0].equipmentList()[3] = Global.armors[20];
-		Party.members()[0].equipmentList()[4] = Global.armors[28];
-		Party.members()[0].equipmentList()[5] = Global.armors[29];
 		
 		Party.members()[1].equipmentList()[0] = Global.weapons[6];
+		Party.members()[1].equipmentList()[1] = Global.armors[5];
+		Party.members()[1].equipmentList()[2] = Global.armors[14];
+		Party.members()[1].equipmentList()[3] = Global.armors[23];
 
 		
 		Party.members()[2].equipmentList()[0] = Global.weapons[0];
 		Party.members()[2].equipmentList()[1] = Global.armors[0];
 		Party.members()[2].equipmentList()[2] = Global.armors[9];
 		Party.members()[2].equipmentList()[3] = Global.armors[18];
-		Party.members()[2].equipmentList()[4] = Global.armors[30];
-		Party.members()[2].equipmentList()[5] = Global.armors[31];
 		
 		Party.members()[3].equipmentList()[0] = Global.weapons[13];
-
-		
-//		Party.members()[0].addHp(-10);
-
+		Party.members()[3].equipmentList()[2] = Global.armors[9];
+		Party.members()[3].equipmentList()[3] = Global.armors[18];
+		//inventory
 		Party.addItem(Global.armors[0]);
-		Party.addItem(Global.armors[1]);
-		Party.addItem(Global.armors[2]);
-		
+		Party.addItem(Global.armors[5]);
+		Party.addItem(Global.armors[10]);
+		Party.addItem(Global.armors[15]);
+		Party.addItem(Global.armors[15]);
+
 		Party.addItem(Global.items[0]);
 		Party.addItem(Global.items[1]);
 		Party.addItem(Global.items[2]);
 		Party.addItem(Global.items[3]);
+		Party.addItem(Global.items[4]);
+		Party.addItem(Global.items[0]);
+		Party.addItem(Global.items[1]);
+		Party.addItem(Global.items[2]);
 		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
-		Party.addItem(Global.items[3]);
+		Party.addItem(Global.items[4]);
 		
 		Party.addItem(Global.weapons[0]);
-		Party.addItem(Global.weapons[1]);
-		Party.addItem(Global.weapons[2]);
+		Party.addItem(Global.weapons[4]);
+		Party.addItem(Global.weapons[8]);
+		Party.addItem(Global.weapons[12]);
+		Party.addItem(Global.weapons[12]);
 		
 		Party.addGold(100);
+		//testing
+		for (Actor a: Party.members())
+			a.modHp(-(a.mhp()) + 1);
+		
 	}
 }

@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	
+* 	@update 	8/10/2017
 */
 //************************************************************
 package battler;
@@ -99,10 +99,34 @@ public class Base {
 	}
 //************************************************************
 /**
-*	Mutators
+*	Booleans
 */
 //************************************************************
-	public void addHp(int hp){
-		attributeList[0] += hp;
+	public boolean 		isDead(){
+		if (hp() == 0)
+			return true;
+		else
+			return false;
+	}
+//************************************************************
+/**
+*	Modifiers
+*/
+//************************************************************
+	public void 		modHp(int hp){
+		if (hp() + hp < 0)
+			attributeList[0] = 0;
+		else if (hp() + hp > mhp())
+			attributeList[0] = mhp();
+		else
+			attributeList[0] += hp;
+	}
+	public void 		modMp(int mp){
+		if (mp() + mp < 0)
+			attributeList[1] = 0;
+		else if (mp() + mp > mmp())
+			attributeList[1] = mmp();
+		else
+			attributeList[1] += mp;
 	}
 }

@@ -20,7 +20,7 @@ public class DBConnector {
 //************************************************************
 	//file path
 	private static final String dbConn 			= "jdbc:sqlite:";
-	private static final String dbPath 			= "database/";
+	private static final String dbPath 			= ":resource:";
 	private static final String dbExt 			= ".sqlite";
 	//database definitions
 	protected static final String dbData 		= dbConn + dbPath + "data" + dbExt;

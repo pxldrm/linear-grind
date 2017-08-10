@@ -4,14 +4,20 @@
 *	
 *	@author		pxldrm
 *	@since		7/22/2017
-* 	@update 	7/28/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package window;
+import javax.swing.BorderFactory;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 public class Base{
@@ -26,19 +32,23 @@ public class Base{
 	private static final int SCREEN_WIDTH 		= Base.GD.getDisplayMode().getWidth();
 	private static final int SCREEN_HEIGHT 		= Base.GD.getDisplayMode().getHeight();
 	//frame dimensions
+//	private static final int FRAME_WIDTH 		= 680;
+//	private static final int FRAME_HEIGHT 		= FRAME_WIDTH / 2;
 	private static final int FRAME_WIDTH 		= Base.SCREEN_WIDTH / 2;
 	private static final int FRAME_HEIGHT 		= Base.SCREEN_HEIGHT / 2;
 	private static final int X_POS 				= (Base.SCREEN_WIDTH - Base.FRAME_WIDTH) / 2;
 	private static final int Y_POS 				= (Base.SCREEN_HEIGHT - Base.FRAME_HEIGHT) / 2;
 	private static final int BORDER_WIDTH 		= FRAME_WIDTH / 40;
 	private static final int BORDER_HEIGHT 		= FRAME_HEIGHT / 40;
+	private static final int HOR_SECTIONS 		= 6;
+	private static final int VER_SECTIONS 		= 10;
+	private final static int SECTION_BORDER 	= FRAME_WIDTH / 192;
+	private final static int PADDING 			= FRAME_WIDTH / 96;
 	//card panels
 	public static JPanel 		cards;
 	public static final String 	TITLE_CARD 		= "title";
 	public static final String 	MENU_CARD 		= "menu";
 	public static final String 	GAMEOVER_CARD 	= "gameOver";
-	//section separator dimension
-	private final static int 		BORDER 			= 5;
 //************************************************************
 /**
 *	Constructor
@@ -63,6 +73,7 @@ public class Base{
 *	Accessors
 */
 //************************************************************
+	//dimensions
 	public static int 			width(){
 		return FRAME_WIDTH;
 	}
@@ -81,6 +92,16 @@ public class Base{
 	public static int 			borderHeight(){
 		return BORDER_HEIGHT;
 	}
+	public static int 			horizontalSections(){
+		return HOR_SECTIONS;
+	}
+	public static int 			verticalSections(){
+		return VER_SECTIONS;
+	}
+	public static int 			sectionBorder(){
+		return SECTION_BORDER;
+	}
+	//card panels
 	public static JPanel 		cards(){
 		return cards;
 	}
@@ -93,35 +114,42 @@ public class Base{
 	public static String 		gameOver(){
 		return GAMEOVER_CARD;
 	}
-	public static int 			border(){
-		return BORDER;
-	}
 	public Object 				wipe(){
 		return null;
 	}
+//************************************************************
+/**
+*	Common objects
+*/
+//************************************************************
+	public static JButton 		menuButton(String s, int x, int y, int w, int h){
+		JButton b = new JButton(s);
+		b.setFocusable(false);
+		b.setFont(display.Base.menuFont());
+		b.setForeground(Color.white);
+		b.setBackground(Color.black);
+		b.setBounds(x, y, w, h);
+		return b;
+	}
+	public static JLabel 		menuLabel(String s, int hA, int vA, int x, int y, int w, int h){
+		JLabel l = new JLabel(s);
+		l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.white),BorderFactory.createEmptyBorder(PADDING, PADDING, PADDING, PADDING)));
+		l.setHorizontalAlignment(hA);
+		l.setVerticalAlignment(vA);
+		l.setFont(display.Base.menuFont());
+		l.setForeground(Color.white);
+		l.setBounds(x, y, w, h);
+		return l;
+	}
+	public static JComboBox<Object> 		menuComboBox(DefaultComboBoxModel<Object> m, int x, int y, int w, int h){
+		JComboBox<Object> c = new JComboBox<Object>();
+		c.setFocusable(false);
+		c.setMaximumRowCount(5);
+		c.setModel(m);
+		c.setFont(display.Base.menuFont());
+		c.setForeground(Color.white);
+		c.setBackground(Color.black);
+		c.setBounds(x, y, w, h);
+		return c;
+	}
 }
-
-
-
-
-
-//JLabel lblSelectItem = new JLabel("Items: ");
-//lblSelectItem.setBounds(280, 195, 120, 14);
-//
-//itemList = new String[Party.itemCount];
-//
-//for (int i = 0; i < Party.itemCount; i++){
-//	if (Party.items()[i] != null)
-//		itemList[i] = Party.items()[i].name();
-//}
-//
-//	
-//JComboBox<Object> itemSelect = new JComboBox<Object>(itemList);
-//itemSelect.setBounds(420, 192, 160, 20);
-//
-//
-//
-//
-//
-//add(itemSelect);
-//add(lblSelectItem);

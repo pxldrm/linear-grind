@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	7/17/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package item;
@@ -17,17 +17,15 @@ public class Skill extends Base{
 */
 //************************************************************
 	private Type 	skillType;
-	private Type 	damageType;
 	private int 	damageValue;
 //************************************************************
 /**
 *	Constructor
 */
 //************************************************************
-	public 			Skill(int id, String name, int cost, int[] effectType, int[] attributeList, int[] elementList, int skillType, int damageType, int damageValue){
-		super(id, name, cost, effectType, attributeList, elementList);
+	public 			Skill(int id, String name, int cost, int[] effectType, int damageType, int[] attributeList, int[] elementList, int skillType, int damageValue, String description){
+		super(id, name, cost, effectType, damageType, attributeList, elementList, description);
 		this.skillType 		= Global.skillTypes[skillType];
-		this.damageType 	= Global.damageTypes[damageType];
 		this.damageValue 	= damageValue;
 	}
 //************************************************************
@@ -37,9 +35,6 @@ public class Skill extends Base{
 //************************************************************
 	public Type 	skillType(){
 		return skillType;
-	}
-	public Type 	damageType(){
-		return damageType;
 	}
 	public int 		damageValue(){
 		return damageValue;
@@ -67,10 +62,11 @@ public class Skill extends Base{
 				name 				+ display.Base.space(20 - name.length()) +
 				cost 				+ display.Base.space(10 - String.valueOf(cost).length()) +
 				a 					+ display.Base.space(20 - a.length()) +
+				damageType.name() 	+ display.Base.space(10 - damageType.name().length()) +
 				b 					+ display.Base.space(45 - b.length()) +
 				c 					+ display.Base.space(50 - c.length()) +
 				skillType.name() 	+ display.Base.space(15 - skillType.name().length()) +
-				damageType.name() 	+ display.Base.space(10 - damageType.name().length()) +
-				damageValue;
+				damageValue 		+ display.Base.space(5 - String.valueOf(damageValue).length()) +
+				description;
 	}
 }

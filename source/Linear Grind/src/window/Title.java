@@ -9,14 +9,12 @@
 //************************************************************
 package window;
 import javax.swing.JPanel;
-import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
-import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import data.Global;
 @SuppressWarnings("serial")

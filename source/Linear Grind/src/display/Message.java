@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/19/2017
-* 	@update 	7/21/2017
+* 	@update 	8/8/2017
 */
 //************************************************************
 package display;
@@ -24,6 +24,13 @@ public class Message {
 	public static void showMessage(String s){
 		JOptionPane.showMessageDialog(null, s);
 	}
+//************************************************************
+/**
+*	Game Messages
+*/
+//************************************************************
+	public static String confirm = "Are you sure?";
+	public static String charSelect = "Choose character.";
 //************************************************************
 /**
 *	Common HTML tags

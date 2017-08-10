@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	7/24/2017
+* 	@update 	8/4/2017
 */
 //************************************************************
 package game;
@@ -20,7 +20,7 @@ public class Party {
 	private static int 		PARTY_SIZE 		= 4;
 	private static int 		ARMOR_INV_SIZE 	= 10;
 	private static int 		ITEM_INV_SIZE 	= 10;
-	private static int 		WEAPON_INV_SIZE = 4;
+	private static int 		WEAPON_INV_SIZE = 10;
 	//counters
 	private static int 		memberCount 	= 0;
 	private static int 		armorCount 		= 0;
@@ -134,6 +134,54 @@ public class Party {
 				}
 			}
 		}
+	}
+	public static void 		removeItem(int item){
+		items[item] = null;
+		//sort items
+		itemCount = 0;
+		item.Base[] temp = new item.Base[items.length];
+		for (int i = 0; i < items.length; i++){
+			if (items[i] != null){
+				temp[itemCount] = items[i];
+				itemCount += 1;
+			}
+		}
+		for (int i = 0; i < itemCount; i++)
+			items[i] = (Item)temp[i];
+		for (int i = itemCount; i < items.length; i++)
+			items[i] = null;
+	}
+	public static void 		removeWeapon(int item){
+		weapons[item] = null;
+		//sort weapons
+		weaponCount = 0;
+		item.Base[] temp = new item.Base[weapons.length];
+		for (int i = 0; i < weapons.length; i++){
+			if (weapons[i] != null){
+				temp[weaponCount] = weapons[i];
+				weaponCount += 1;
+			}
+		}
+		for (int i = 0; i < weaponCount; i++)
+			weapons[i] = (Weapon)temp[i];
+		for (int i = weaponCount; i < weapons.length; i++)
+			weapons[i] = null;
+	}
+	public static void 		removeArmor(int item){
+		armors[item] = null;
+		//sort armors
+		armorCount = 0;
+		item.Base[] temp = new item.Base[armors.length];
+		for (int i = 0; i < armors.length; i++){
+			if (armors[i] != null){
+				temp[armorCount] = armors[i];
+				armorCount += 1;
+			}
+		}
+		for (int i = 0; i < armorCount; i++)
+			armors[i] = (Armor)temp[i];
+		for (int i = armorCount; i < armors.length; i++)
+			armors[i] = null;
 	}
 	public static void 		addGold(int g){
 		gold += g;

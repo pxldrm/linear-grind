@@ -4,7 +4,7 @@
 *	
 *	@author		pxldrm
 *	@since		7/14/2017
-* 	@update 	7/30/2017
+* 	@update 	8/7/2017
 */
 //************************************************************
 package battler;
@@ -18,6 +18,7 @@ public class Actor extends Base{
 //************************************************************
 	private Role 		role;
 	private item.Base[] equipmentList;
+	private int 		skillCount = 0;
 //************************************************************
 /**
 *	Constructor
@@ -27,8 +28,10 @@ public class Actor extends Base{
 		super(id, name, attributeList, elementList, skillList, lv, exp);
 		this.role 		= Global.roles[role];
 		for (int i = 0; i < this.role.skillLearned().length; i++){
-			if (this.role.skillLearned()[i] != -1 && this.role.lvLearned()[i] != -1 && this.lv >= this.role.lvLearned()[i])
+			if (this.role.skillLearned()[i] != -1 && this.role.lvLearned()[i] != -1 && this.lv >= this.role.lvLearned()[i]){
 				this.skillList[i] 		= Global.skills[this.role.skillLearned()[i]];
+				skillCount ++;
+			}
 		}
 		this.equipmentList 		= new item.Base[equipmentList.length];
 		for (int i = 0; i < this.equipmentList.length; i++){
@@ -46,6 +49,9 @@ public class Actor extends Base{
 	}
 	public item.Base[] 	equipmentList(){
 		return equipmentList;
+	}
+	public int 			skillCount(){
+		return skillCount;
 	}
 	public int 			next(){
 		return (int) Math.pow(lv * 10, lv);
